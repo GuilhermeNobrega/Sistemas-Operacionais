@@ -1,6 +1,6 @@
-Gerência de Processos e Threads
+#Gerência de Processos e Threads
 
-Problema 1: "Desenvolva um programa que simule a criação de processos e a alocação de recursos em um Sistema Operacional. Cada processo deve requerer recursos específicos, e o programa deve garantir que nenhum processo entre em deadlock."
+#Problema 1: "Desenvolva um programa que simule a criação de processos e a alocação de recursos em um Sistema Operacional. Cada processo deve requerer recursos específicos, e o programa deve garantir que nenhum processo entre em deadlock."
 
 lista_processos = [];
 memoria_total = 5
