@@ -1,0 +1,12 @@
+from threading import Thread
+from time import sleep
+def task():
+  sleep(1)
+  print("doing..?")
+
+if __name__ =="__main__":
+  work = Thread(target=task)
+  work.start()
+  print("Task will  run!")
+  work.join()
+print("task is over..")
