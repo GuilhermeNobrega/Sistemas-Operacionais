@@ -35,29 +35,29 @@ def execute_task():
   contador= 0
   valor = 5
   for contador in range(valor):
-    print(f"\tCreating some tasks: =>: {contador}\n")
+    print(f"\t================OPERATING AT PROCESS TREE:============= =>: {contador}MB/s\n")
     sleep(1)
   
 def repeat(execute_task):
   rodar = Thread(target = execute_task)
-  print("Starting task...")
-  print("task is running. Se it!")
   rodar.start()
   rodar.join()
-  print("Task is over!!!")
+print("\t\t-------------STARTING OPERATION--------------\n")
 while True:
     execute_task()
     redutor = memoria_total-1
     memoria_total = redutor
-    print(f"PROCESSO {contador} EM EXECUÇÃO! CADA PROCESSO OCUPARÁ 1 DA MEMORIA TOTAL, QUE TEM POR CAPACIDADE TOTAL {memoria_total}")
+    print(f"PROCESSO {contador} EM EXECUÇÃO! CADA PROCESSO OCUPARÁ 1 DA MEMORIA TOTAL, QUE TEM POR CAPACIDADE TOTAL {memoria_total}\n")
     contador +=1
     memoria_ocupada_processos +=1
     if memoria_ocupada_processos == memoria_total:
-      print("QUANTIDADE DE MEMORIA TOTAL OCUPADA. O SISTEMA IRÁ PARAR AS EXECUÇÕES PARA EVITAR UM DEADLOCK!")
-      resposta = input("DESEJA INTERROMPER AS EXECUÇÕES?")
-      if resposta =='sim' or resposta =='Sim':
-        print("------------SISTEMA INTERROMPIDO----------")
+      print("===============================QUANTIDADE DE MEMORIA TOTAL OCUPADA. O SISTEMA IRÁ PARAR AS EXECUÇÕES PARA EVITAR UM DEADLOCK!==============================\n")
+      resposta = input("""===================DESEJA INTERROMPER AS EXECUÇÕES?=================================\n
+      OPTION: [Yes]
+      OPTION: [No]\n""")
+      if resposta =='Yes' or resposta =='yes':
+        print("\t\t------------SYSTEM INTERRUPTED----------\n")
         break
       else:
-        print("Fuck you dude")
+        print("\t\t============= [FATAL ERROR] UNEXPECTED CATASTROPHIC FAILURE!!=============\n")
         break
