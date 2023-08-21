@@ -35,7 +35,7 @@ def execute_task():
   contador= 0
   valor = 5
   for contador in range(valor):
-    print(f"\t================OPERATING AT PROCESS TREE:============= =>: {contador}MB/s\n")
+    print(f"\n\n\t================OPERATING AT PROCESS TREE:============= =>: {contador}MB/s\n")
     sleep(1)
   
 def repeat(execute_task):
@@ -43,6 +43,11 @@ def repeat(execute_task):
   rodar.start()
   rodar.join()
 print("\t\t-------------STARTING OPERATION--------------\n")
+c = 10
+for d in range(c):
+    sleep(0.5)
+    print("\t-", end='')
+
 while True:
     execute_task()
     redutor = memoria_total-1
