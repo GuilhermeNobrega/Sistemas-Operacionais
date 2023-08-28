@@ -8,3 +8,17 @@ Bestfit = {
 }
 nome = "jo"
 print(f"nome:{Bestfit}")
+
+test = {}
+if not test:
+    print("Dicionário vazio")
+else:
+  print(f"test é {test}")
+
+def add():
+  print("Vamos adicionar processos ao dicionario")
+  test["Processus"] = "xadasd"
+  return f" retorno{test}"
+
+print()
+add()
