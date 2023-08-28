@@ -58,3 +58,17 @@ while True:
     menor_valor.update({'Value': resultado})
     print(menor_valor)
 
+  if escolha == 3:
+    index = None
+    if "Value" in First_fit:
+      index = list(First_fit).index("Value")
+      print("Index of fee:", index) 
+      menor_valor = menorvalor(First_fit)
+      print(menor_valor)
+      x = 67
+      salvar = menor_valor['Value']
+      resultado = (x-salvar)
+      #print(resultado)
+      print(f"Processo x com valor {x} irá ser adicionado a menor posição de memória: => {menor_valor}")
+      menor_valor.update({'Value': resultado})
+      print(menor_valor)
