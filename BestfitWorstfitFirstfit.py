@@ -18,9 +18,10 @@ WorstFit = [
     {"Processo": "Alfa", "Value": 59}
 ]
 def primeirovalor(vlr):
-    return min(vlr, key=lambda a: a['Value'])
+    #return (vlr, key=lambda a: a['Value'])
 #Um dicionário em Python não pode ter chaves duplicadas.
-WorstFit = [
+    return FirstFit[0]
+FirstFit = [
     {"Processo": "Sacturn", "Value": 200},
     {"Processo": "Blackhole", "Value": 24},
     {"Processo": "Blackenerg", "Value": 69}
@@ -48,7 +49,7 @@ while True:
     print(menor_valor)
 
   if escolha == 2:
-    menor_valor = menorvalor(WorstFit)
+    menor_valor = piorvalor(WorstFit)
     print(menor_valor)
     z = 50
     salvar = menor_valor['Value']
@@ -60,15 +61,16 @@ while True:
 
   if escolha == 3:
     index = None
-    if "Value" in First_fit:
-      index = list(First_fit).index("Value")
+    quadrado = primeirovalor(FirstFit)
+    if "Value" in quadrado:
+      index = list(FirstFit[0]).index("Value")
       print("Index of fee:", index) 
-      menor_valor = menorvalor(First_fit)
+      menor_valor = primeirovalor(FirstFit)
       print(menor_valor)
       x = 67
       salvar = menor_valor['Value']
-      resultado = (x-salvar)
+      #resultado = (x-salvar)
       #print(resultado)
-      print(f"Processo x com valor {x} irá ser adicionado a menor posição de memória: => {menor_valor}")
-      menor_valor.update({'Value': resultado})
+      print(f"Processo x com valor {x} irá ser adicionado a menor posição de memória: => {salvar}")
+      menor_valor.update({'Value': salvar-67})
       print(menor_valor)
