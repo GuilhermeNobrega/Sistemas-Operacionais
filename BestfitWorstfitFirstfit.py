@@ -1,7 +1,8 @@
 """Desenvolva um programa que simule o uso da alocação particionada dinâmica, 
 com os algoritmos Best-fit, Worst-fit e First-fit.
 Guilherme Nóbrega Gomes Dantas
-Luisa Carreiro"""
+Luisa Carreiro
+Guilherme Henrique"""
 def menorvalor(vlr):
     return min(vlr, key=lambda a: a['Value'])
 #Um dicionário em Python não pode ter chaves duplicadas.
