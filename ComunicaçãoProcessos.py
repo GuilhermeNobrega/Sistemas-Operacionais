@@ -13,7 +13,6 @@ lista_nomes = ['ay1','bu3','g8s','j84','e3a','p9p','8cz','b4f','1q1','w3w','5ff'
 lista_processos = [];
 memoria_total = 10
 memoria_ocupada_processos = 0
-contador = 0
 def execute_task():
   valor = 5
   for contador in range(valor):
