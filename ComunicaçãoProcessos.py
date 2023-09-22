@@ -4,7 +4,9 @@ Implementação: Implemente uma versão simplificada do sistema de gerenciamento
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 Simulação: Simule o envio e a recepção de mensagens entre processos, demonstrando como o sistema lida com vários cenários, como mensagens de alta prioridade, mensagens em grupo, etc.
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-Relatório: Prepare um relatório descrevendo a arquitetura do sistema, os mecanismos de comunicação de processos utilizados e quaisquer desafios enfrentados durante a implementação."""
+Relatório: Prepare um relatório descrevendo a arquitetura do sistema, os mecanismos de comunicação de processos utilizados e quaisquer desafios enfrentados durante a implementação.
+falta: ==>> fazer comunicação entre processos. Como será feito? A ideia é ver se um processo foi finalizado. Caso tenha sido, de maneira hipotetica, o outro processo poderá rodar, havendo uma comunicação e entre a memória
+recebendo respostas e autorizando o outro processo começar a executar. Será dessa maneira que será implementado, faltando apenas essa parte e a explicação no relatório, para a finalização do projeto."""
 
 from time import sleep
 from random import choice
