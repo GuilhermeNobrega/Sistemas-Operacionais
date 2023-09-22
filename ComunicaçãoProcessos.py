@@ -51,3 +51,41 @@ while True:
       else:
         print("\t\t============= [FATAL ERROR] UNEXPECTED CATASTROPHIC FAILURE!!=============\n")
         break
+
+
+#----------------------------------------------------------------
+
+from time import sleep
+import random
+lista_nomes = ['ay1','bu3','g8s','j84','e3a','p9p','8cz','b4f','1q1','w3w','5ff','6fh','c6c','0o0','9iu','9n0','a4f','b87','a77',
+'8z2','1z3','4z5','cv5','cv1','z9l','z0ç','Z3D','fk4','mt9','ar4','fm1','ct3','r31']
+lista_Response = ['Yes','No']
+contador = 0
+lista_processos = [];
+memoria_total = 10
+memoria_ocupada_processos = 0
+def execute_task():
+  valor = 5
+  for contador in range(valor):
+    response = random.choice(lista_Response)
+    PID = random.randint(200,15000)
+    nombres = random.choice(lista_nomes)
+    randoms = random.randint(50,200)
+    print(f"\n\n\t================| OPERATING AT PROCESS | [{nombres.upper()}] | PID | [{PID}]:============= =>: {randoms}MB/s\n")
+    randoms = random.randint(50,200)
+    print(f"\t================| SUBPROCESS | :============= =>: {randoms}MB/s\n")
+    sleep(5)
+    #x = str(input("PROCESS IS RUNNING?"))
+    print(response)
+    if(response=="Yes"):
+      print(f"Necessário esperar o processo {nombres.upper()} com PID = [{PID}] finalizar...")
+      sleep(5)
+    else:
+      print(f"PROCESSO {nombres.upper()}, CUJO PID É {PID} FINALIZADO! PRÓXIMO...")
+
+print("\t\t-------------STARTING OPERATION--------------\n")
+c = 10
+for d in range(c):
+    sleep(0.5)
+    print("\t-", end='')
+execute_task()
