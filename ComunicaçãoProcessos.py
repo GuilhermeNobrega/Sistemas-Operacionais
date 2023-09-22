@@ -64,6 +64,8 @@ contador = 0
 lista_processos = [];
 memoria_total = 10
 memoria_ocupada_processos = 0
+c = 10
+BUFFER = 'BUFFER_EVENTS'
 def execute_task():
   valor = 5
   for contador in range(valor):
@@ -74,6 +76,10 @@ def execute_task():
     print(f"\n\n\t================| OPERATING AT PROCESS | [{nombres.upper()}] | PID | [{PID}]:============= =>: {randoms}MB/s\n")
     randoms = random.randint(50,200)
     print(f"\t================| SUBPROCESS | :============= =>: {randoms}MB/s\n")
+    for d in range(c):
+      sleep(0.5)
+      print(f"==== [SENDING INFORMATIONS TO BUFFER {BUFFER}] ====\n", end='')
+      print(f"[X][X][X][X][X][X][X][X][X][X][X]")
     sleep(5)
     #x = str(input("PROCESS IS RUNNING?"))
     print(response)
@@ -84,7 +90,6 @@ def execute_task():
       print(f"PROCESSO {nombres.upper()}, CUJO PID É {PID} FINALIZADO! PRÓXIMO...")
 
 print("\t\t-------------STARTING OPERATION--------------\n")
-c = 10
 for d in range(c):
     sleep(0.5)
     print("\t-", end='')
