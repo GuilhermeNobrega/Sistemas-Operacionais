@@ -65,16 +65,13 @@ while True:
     [0] - Exit\n"""))
 
     if escolha == 3:
-        # Substituir a primeira posição na lista com os novos valores
         itens[0]["BLOCO MEMÓRIA [1]"] = f"VALOR_MEMORIA: {VALOR_PROCESSO}MB/s"
         itens[0]["PROCESSO"] = f"-> {NOME_PROCESSO}"
 
-        # Remover o valor antigo
         for key in list(itens[0].keys()):
             if key != "BLOCO MEMÓRIA [1]" and key != "PROCESSO":
                 del itens[0][key]
 
-        # Imprimir os itens atualizados
         for item in itens:
             for key, value in item.items():
                 print(f"{key}: {value}")
